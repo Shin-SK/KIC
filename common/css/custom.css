@@ -531,6 +531,9 @@ html, body {
   justify-content: center;
   align-items: center;
 }
+.message__wrap {
+  width: 100%;
+}
 .message .logo {
   display: flex;
   justify-content: center;
@@ -542,19 +545,22 @@ html, body {
 }
 @media screen and (max-width: 576px) {
   .message .logo img {
-    width: 100px;
+    width: 80px;
   }
 }
 .message .text {
   writing-mode: vertical-rl;
   height: 300px;
   margin: auto;
+  line-height: 1.5;
 }
 @media screen and (max-width: 576px) {
   .message .text {
     overflow-y: scroll;
-    width: 100%;
-    height: 400px;
+    height: auto;
+    max-height: calc(80vh - 80px);
+    overflow-x: hidden;
+    overflow-y: hidden;
   }
 }
 .message .text p {
