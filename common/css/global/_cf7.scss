@@ -1,0 +1,160 @@
+@use "global";
+
+//////////   cf7   //////////
+/// 
+.contactArea{
+    margin-top: 40px;
+    .titleArea{
+        text-align: center;
+        margin-bottom: 40px;
+            .title{
+                @include global.fs(40);
+            }
+            .sub{
+                color: black;
+            }
+    }
+    form{
+        padding: 0px 20px;
+        @include global.md{
+            padding: 0px;
+        }            
+        .wrap{
+            display: flex;
+            gap: 16px;
+            margin-bottom: 30px;
+            @include global.md{
+                margin-bottom: 20px;
+            }
+            
+            justify-content: center;
+            @include global.md{
+                flex-direction: column;
+            }
+            
+            .head{
+                width: 30%;
+                 @include global.md{
+                     width: 100%;
+                 }
+            }
+            .contents{
+                display: flex;
+                width: 70%;
+                align-items: center;
+                @include global.md{
+                    width: 100%;
+                }
+            }
+            .head{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                @include global.md{
+                    justify-content: start;
+                    gap: 8px;
+                }
+                
+                label{
+                    font-weight: bold;
+                }
+                span{
+                    color: white;
+                    @include global.fs(10);
+                    background: global.$mainColor;
+                    padding: 3px 10px;
+                    border-radius: 15px;
+                }
+            }
+            &.submit{
+                flex-direction: column;
+                align-items: center;
+            }
+            .wpcf7-tel,.wpcf7-text,.wpcf7-email,.wpcf7-textarea{
+                border: none;
+                background-color: #f4f4f4;
+                width: 100%;
+                padding: 10px;
+            }
+            .wpcf7-form-control-wrap{
+                width: 100%;
+            }
+            input[type="text"] {
+                width: 100% !important;
+                box-sizing: border-box;
+            }
+
+            .wpcf7-select{
+                border: none;
+                background-color: #f4f4f4;
+                width: 50%;
+                padding: 10px;                       
+            }
+            .wpcf7-submit{
+                background-color: global.$mainColor;
+                width: 50%;
+                padding: 5px 0px;
+                font-weight: bold;
+                color: white;
+                text-align: center;
+                border-radius: 25px;
+                border: none;
+                @include global.md{
+                    width: 100%;
+                }
+            }
+
+        }//wrap
+        .btnArea{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 16px;
+            @include global.md{
+                flex-direction: column;
+            }
+            
+            button,input{
+                background-color: global.$mainColor;
+                width: 50%;
+                padding: 5px 0px;
+                font-weight: bold;
+                color: white;
+                text-align: center;
+                border-radius: 25px;
+                border: none;
+                @include global.md{
+                    width: 100%;
+                }
+            }
+            .wpcf7-spinner{
+                display: none;
+            }
+        }
+    }//form
+
+    .thanks{
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        .title{
+            @include global.fs(30);
+            color: global.$mainColor;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+        .textArea{
+            line-height: 150%;
+            .name{
+                font-weight: bold;
+                margin-bottom: 20px;
+                margin-right: 10px;
+                span{
+                    @include global.fs(18);
+                }
+            }
+        }
+
+    }//thanks
+
+}//contact

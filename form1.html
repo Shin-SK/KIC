@@ -1,0 +1,52 @@
+<div class="wrap name">
+    <div class="head">
+        <label>お名前</label><span>必須</span>
+    </div>
+    <div class="contents">
+        [text* your-name id:name class:name]
+        <span id="confirmName" class="confirm-field" style="display:none;"></span>
+    </div>
+</div>
+
+<div class="wrap mail">
+    <div class="head">
+        <label>メールアドレス</label><span>必須</span>
+    </div>
+    <div class="contents">
+        [email* your-email id:email]
+        <span id="confirmEmail" class="confirm-field" style="display:none;"></span>
+    </div>
+</div>
+
+<div class="wrap tel">
+    <div class="head">
+        <label>電話番号</label><span>必須</span>
+    </div>
+    <div class="contents">
+        [tel* your-tel id:tel]
+        <span id="confirmTel" class="confirm-field" style="display:none;"></span>
+    </div>
+</div>
+
+<div class="wrap textarea">
+    <div class="head">
+        <label>お問合せ内容</label><span>必須</span>
+    </div>
+    <div class="contents">
+        [textarea* textarea id:textarea class:textarea]
+        <span id="confirmTextarea" class="confirm-field" style="display:none;"></span>
+    </div>
+</div>
+
+[honeypot honeypot-138]
+
+<div class="btnArea">
+    <!-- 確認ボタン -->
+    <button type="button" id="confirmButton">確認する</button>
+
+<!-- 実際の送信ボタン（初期状態では非表示） -->
+[submit id:realSubmitButton class:real-submitutton "送信"]
+
+    <!-- 戻るボタン（初期状態では非表示） -->
+    <button type="button" id="backButton" style="display:none;">戻る</button>  
+</div>

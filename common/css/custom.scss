@@ -1,0 +1,397 @@
+@use "../css/global/global" as *;
+@use "../css/global/reset" as *;
+@use "../css/global/cf7" as *;
+@import "scroll";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Zen+Kurenaido&display=swap');
+
+@mixin mont{
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 800;
+	font-style: normal;
+}
+
+@mixin hand{
+	font-family: "Zen Kurenaido", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.mainTitle{
+	@include fs(30);
+	@include mont();
+	text-align: center;
+}
+
+.subtitle{
+	margin-top: 16px;
+	text-align: center;
+}
+
+.br{
+	white-space: pre-line;
+}
+
+.loader{
+	position: fixed;
+	height: 100vh;
+	width: 100%;
+	@include flex();
+	background-color: white;
+	z-index: 999999;
+	.spinner {
+		animation: spin 2s ease-in-out infinite;
+		img{
+			width: 100px;
+			height: auto;
+		}
+	  }
+	  
+	  @keyframes spin {
+		0%   { transform: rotate(0deg); }
+		100% { transform: rotate(360deg); }
+	  }
+}
+
+
+.kv{
+	height: 100vh;
+	width: 100%;
+	position: relative;
+	overflow-x: hidden;
+	.left{
+		position: absolute;
+		width: 50%;
+		height: 100vh;
+		background-color: white;
+		z-index: 2;
+		top: 0;
+		left: -50%;
+		@include flex();
+		@include sp{
+			background-color: rgba($color: #fff, $alpha: 0.9);
+			width: 100%;
+			margin: 8px;
+			padding: 8px;
+			height: auto;
+			aspect-ratio: 1/1;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			opacity: 0;
+			transform: translate(-50px, 0px);
+		}
+		.wrap{
+			@include flex();
+			flex-direction: column;
+			align-items: flex-start;
+			.head{
+				.t1, .t2 ,.t3{
+					margin-bottom: 16px;
+					@include mont;
+					@include fs(50);
+					&::first-letter{
+						color: $mainColor;
+					}
+				}
+			}
+			.head-2{
+				font-weight: bold;
+				@include fs(18);
+			}
+		}
+	}
+	.right{
+		position: absolute;
+		width: 100%;
+		height: 100vh;
+		z-index: 1;
+		top: 0;
+		right: 0;
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+.message{
+	min-height: 100vh;
+	@include flex();
+	&__wrap{
+	}
+	.logo{
+		@include flex();
+		margin-bottom: 40px;
+		img{
+			width: 150px;
+			@include sp{
+				width: 100px;
+			}
+		}
+	}
+	.text{
+		-ms-writing-mode: tb-rl;
+		writing-mode: vertical-rl;
+		height: 300px;
+		margin: auto;
+		@include sp{
+			overflow-y: scroll;
+			width: 100%;
+			height: 400px;
+		}
+		p{
+			margin-left: 16px;
+		}
+		.name{
+			font-weight: bold;
+			@include hand();
+			@include fs(20);
+		}
+	}
+
+}
+
+.partner{
+	background-color: #f5f5f5;
+	padding: 40px 0px;
+	min-height: 100vh;
+	position: relative;
+	flex-direction: column;
+	@include flex();
+		&__wrap{
+			margin-top: 40px;
+
+			.area{
+				@include flex();
+				gap: 16px;
+				flex-wrap: wrap;
+				.item{
+					max-width: 150px;
+				}
+			}
+		}
+}
+
+.about{
+	.subtitle{
+		padding: 16px;
+		text-align: center;
+	}
+	&__wrap{
+		height: auto;
+		@include flex();
+		.area{
+			display: grid;
+			grid-template-columns: repeat(4,1fr);
+			@include sp{
+				grid-template-columns: repeat(2,1fr);
+			}
+		}
+		.box{
+			padding: 16px;
+			.img{
+				img{
+					aspect-ratio: 1/1;
+					object-fit: cover;
+				}
+			}
+			.wrap{
+				.title{
+					font-weight: bold;
+					text-align: center;
+					margin: 16px auto;
+				}
+			}
+		}
+	}
+}
+
+.voice{
+	&__wrap{
+		display: grid;
+		grid-template-columns: repeat(3,1fr);
+		gap: 40px;
+		@include md{
+			overflow-x: scroll;
+			width: 100%;
+			grid-auto-flow: column;
+			grid-auto-columns: 80%;
+			grid-template-columns: unset;
+			gap: 16px;
+		}
+		.box{
+			padding: 16px;
+			.photo{
+				position: relative;
+				margin-bottom: 16px;
+				.midashi{
+					position: absolute;
+					top: 16px;
+					left: 16px;
+					padding: 8px;
+					writing-mode: vertical-rl;
+					background-color: $mainColor;
+					color: white;
+				}
+			}
+			.text{
+				.kana{
+					color: $mainColor;
+					@include fs(10);
+					font-weight: bold;
+				}
+				.name{
+					@include fs(20);
+					font-weight: bold;
+				}
+				.position{
+					color: gray;
+				}
+				p{
+					margin-top: 16px;
+					@include fs(12);
+				}
+			}
+		}
+	}
+}//voice
+
+.recruit{
+	.subTitle{
+		text-align: center;
+		margin: 40px auto;
+		font-weight: bold;
+	}
+	.cv{
+		@include flex();
+		a{
+			padding: 8px 80px;
+			background-color: $mainColor;
+			color: white;
+			border-radius: 100px;
+			font-weight: bold;
+			@include flex();
+			&:hover{
+				text-decoration: unset;
+			}
+			span{
+				animation: blink 1s ease-in-out infinite;
+			}
+			@keyframes blink {
+				0%, 100% { opacity: 0; }  /* 完全に消える */
+				50%      { opacity: 1; }  /* 完全に見える */
+			  }
+		}
+	}
+}//recruit
+
+
+.company{
+	&__wrap{
+		display: grid;
+		grid-template-columns: auto 1fr; 
+		margin: 40px auto 0;
+		width: fit-content;
+		@include sp{
+			grid-template-columns: 1fr;
+			width: 100%;
+		}
+		> div:nth-of-type(4n+3), div:nth-of-type(4n+4){
+			background-color: #f5f5f5;
+		}
+		>div{
+			padding: 16px;
+			@include sp{
+				padding: 0px 16px;
+			}
+		}
+		.head {
+			font-weight: bold;
+			@include sp{
+				padding-top: 16px;
+			}
+		}
+		.text {
+			max-width: 100%;
+			width: 400px;
+			@include sp{
+				width: 100%;
+				padding-bottom: 16px;
+			}
+		}
+	}
+}
+
+.map{
+	&__wrap{
+		iframe{
+			width: 100%;
+			height: 40vh;
+		}
+	}
+}
+
+.pp{
+	.mainTitle{
+		cursor: pointer;
+		@include flex();
+		gap: 8px;
+		i{
+			@include fs(12);
+			transform: rotate(0deg);
+			transition: transform 0.3s;
+			&.rotate{
+				transform: rotate(90deg);
+			}
+		}
+
+	}
+	&__wrap{
+		.area{
+			padding: 40px;
+			background-color: #f5f5f5;
+			p{
+				padding: 16px;
+				height: 200px;
+				width: 100%;
+				background-color: white;
+				overflow-y: scroll;
+			}
+		}
+	}
+}
+
+footer{
+	margin-top: 80px;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	@include flex();
+	width: 100%;
+	background-color: $mainColor;
+	flex-direction: column;
+	gap: 40px;
+	.wrap{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.logo{
+			img{
+				width: 100px;
+			}
+		}
+		.menu{
+
+		}
+	}
+	.cr{
+		text-align: center;
+		a{
+			color: white;
+		}
+	}
+}
