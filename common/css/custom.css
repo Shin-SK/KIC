@@ -427,6 +427,10 @@ html, body {
   white-space: pre-line;
 }
 
+p {
+  font-size: clamp(1.2rem, 1.1346938776rem + 0.2040816327vw, 1.4rem);
+}
+
 .loader {
   position: fixed;
   height: 100vh;
@@ -583,19 +587,48 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* タブレット：1は全幅→残りは2列 */
+  /* スマホ：縦並び */
 }
 .partner__wrap {
   margin-top: 40px;
+  /* 2,3,4,5 は4等分 */
+  /* 1だけドンと横幅いっぱい */
 }
 .partner__wrap .area {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
   flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
 }
 .partner__wrap .area .item {
-  max-width: 150px;
+  max-width: none; /* 既存の200px制限を解除 */
+  flex: 0 1 calc((100% - 64px) / 5); /* 4列（ギャップ×3） */
+  display: grid;
+  place-items: center;
+}
+.partner__wrap .area .item:first-child {
+  flex-basis: 100%;
+}
+.partner__wrap .area .item img {
+  max-height: 100px;
+  width: auto;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media screen and (max-width: 768px) {
+  .partner .partner__wrap .area .item {
+    flex-basis: calc((100% - 16px) / 2);
+  }
+  .partner .partner__wrap .area .item:first-child {
+    flex-basis: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .partner .partner__wrap .area .item {
+    flex-basis: 100%;
+  }
 }
 
 .about .subtitle {
@@ -652,6 +685,14 @@ html, body {
 .voice__wrap .box .photo {
   position: relative;
   margin-bottom: 16px;
+}
+.voice__wrap .box .photo img {
+  aspect-ratio: 9/16;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  min-height: 30vh;
 }
 .voice__wrap .box .photo .midashi {
   position: absolute;

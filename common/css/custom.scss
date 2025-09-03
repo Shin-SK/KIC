@@ -32,6 +32,9 @@
 .br{
 	white-space: pre-line;
 }
+p{
+	@include fs(12);
+}
 
 .loader{
 	position: fixed;
@@ -167,18 +170,47 @@
 	position: relative;
 	flex-direction: column;
 	@include flex();
-		&__wrap{
-			margin-top: 40px;
+  &__wrap {
+    margin-top: 40px;
 
-			.area{
-				@include flex();
-				gap: 16px;
-				flex-wrap: wrap;
-				.item{
-					max-width: 150px;
-				}
-			}
-		}
+    .area{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    /* 2,3,4,5 は4等分 */
+    .area .item{
+      max-width: none;                                /* 既存の200px制限を解除 */
+      flex: 0 1 calc((100% - 4*16px) / 5);            /* 4列（ギャップ×3） */
+      display: grid;
+      place-items: center;
+    }
+
+    /* 1だけドンと横幅いっぱい */
+    .area .item:first-child{
+      flex-basis: 100%;
+    }
+
+    .area .item img{
+      max-height: 100px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  /* タブレット：1は全幅→残りは2列 */
+  @include md{
+    .partner__wrap .area .item{ flex-basis: calc((100% - 16px) / 2); }
+    .partner__wrap .area .item:first-child{ flex-basis: 100%; }
+  }
+
+  /* スマホ：縦並び */
+  @include sp{
+    .partner__wrap .area .item{ flex-basis: 100%; }
+  }
 }
 
 .about{
@@ -233,6 +265,12 @@
 			.photo{
 				position: relative;
 				margin-bottom: 16px;
+				img{
+					aspect-ratio: 9/16;
+					object-fit: cover;
+					object-position: center;
+					min-height: 30vh;
+				}
 				.midashi{
 					position: absolute;
 					top: 16px;

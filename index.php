@@ -61,7 +61,7 @@ get_header();
             <div class="area">
                 <?php
                     $dir_path = get_template_directory() . '/common/images/partner';
-                    $files = glob($dir_path . '/*.{jpg,jpeg,png,gif,webp}', GLOB_BRACE);
+                    $files = glob($dir_path . '/*.{jpg,jpeg,png,gif,webp,svg}', GLOB_BRACE);
 
                     // ファイルが存在すればループで表示
                     if($files) {
@@ -98,28 +98,32 @@ get_header();
                     </div>
                     <div class="wrap">
                         <div class="title">人材派遣</div>
-                        <p>企業様が求めるスキルと、経験を持ち合わせている人材を、必要な期間や時期に応じて派遣するサービスです。</p>
+                        <p>企業様が求めるスキルと経験を備えた人材を、繁忙期や新店立ち上げなどのタイミングに合わせ柔軟に派遣します。即戦力として現場に早期定着し、売上と顧客満足の両立に貢献します。
+                        </p>
                     </div>
                 </div>
                 <div class="box box2">
                     <div class="img"><img src="<?php echo get_template_directory_uri(); ?>/common/images/02.webp"></div>
                     <div class="wrap">
                         <div class="title">アウトソーシング</div>
-                        <p>業務効率化や品質向上などのニーズに対応すべく、最適なトータルソリューションをご提案するサービスです。</p>
+                        <p>売場運営、販促実務、棚卸・レポーティングなどの業務をワンストップで代行。繁閑に応じて必要なリソースだけをスケールでき、固定費を抑えながら成果に集中できます。
+                        </p>
                     </div>
                 </div>
                 <div class="box box3">
                     <div class="img"><img src="<?php echo get_template_directory_uri(); ?>/common/images/03.webp"></div>
                     <div class="wrap">
-                        <div class="title">人材派遣</div>
-                        <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+                        <div class="title">販促企画・運営</div>
+                        <p>店頭プロモーションやサンプリング、POP/什器の手配、イベント運営までワンストップで対応。
+KPI設計→実行→検証→改善を高速で回し、売上・来店促進に直結する施策を提供します。</p>
                     </div>
                 </div>
                 <div class="box box4">
                     <div class="img"><img src="<?php echo get_template_directory_uri(); ?>/common/images/04.webp"></div>
                     <div class="wrap">
-                        <div class="title">人材派遣</div>
-                        <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+                        <div class="title">教育・研修</div>
+                        <p>ロープレ・OJT・eラーニングを組み合わせ、接客力と商品知識を短期で底上げ。
+評価シートで成長を可視化し、トレーナーが定着まで伴走。即戦力化と離職防止を同時に実現します。</p>
                     </div>
                 </div>
             </div>
@@ -137,15 +141,18 @@ get_header();
                 <div class="photo">
                     <img src="<?php echo get_template_directory_uri(); ?>/common/images/v-1.jpg">
                     <div class="midashi">
-                        ここでしかできない事があるから<br>
-                        私はここにいる
+                        信頼は、現場で積み上げる。
                     </div>
                 </div>
                 <div class="text">
-                    <div class="kana">Kannna Hashimoto</div>
+                    <!-- <div class="kana">Kannna Hashimoto</div>
                     <div class="name">橋本環奈</div>
-                    <div class="position">営業部 部長</div>
-                    <p>コメントはたくさん長くなっても、一言でもお顔が見えていて、言葉が伝われば必要十分かと思っています。語りたいことが多ければ別ページに飛ばしてひとつVoiceようのスペシャルページを作ってインタビュー形式にしても良いかと思います。
+                    <div class="position">営業部 部長</div> -->
+                    <p>
+入社後はロープレ・同行・振り返りで「伝え方」「数字の見方」を実践で吸収。<br>
+仮説→実行→検証の結果は日々の数字とお客様の反応で“手応え”として返ってきます。<br>
+将来はトレーナーやプロジェクトリーダー、販促企画などキャリアの広がりもあります。<br>
+「人と向き合い、結果で語りたい」その想いがあるなら、ここで一気に伸びるチャンスです。
                     </p>
                 </div>
             </div>
@@ -155,16 +162,19 @@ get_header();
                 <div class="photo">
                     <img src="<?php echo get_template_directory_uri(); ?>/common/images/v-2.jpg">
                     <div class="midashi">
-                        誰かのために仕事をすることを<br>
-                        学びました
+                        挑戦の後ろに、安心の土台。
                     </div>
                 </div>
                 <div class="text">
-                    <div class="kana">Michopa</div>
+                    <!-- <div class="kana">Michopa</div>
                     <div class="name">池田美優</div>
-                    <div class="position">総務部</div>
-                    <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
-                    </p>
+                    <div class="position">総務部</div> -->
+                    <p>
+私たちは採用・入社手続き・備品・労務・情報管理まで、会社の“当たり前”を整えるチームです。<br>
+現場の迷いを減らし、挑戦のスピードを落とさない仕組みづくりがミッションです。<br>
+申請やフローはシンプルに、ルールはわかりやすく、トラブルは未然に。<br>
+小さな改善を積み重ねて、生産性と働きやすさの両方を上げていきます。<br>
+                </p>
                 </div>
             </div>
 
@@ -172,15 +182,19 @@ get_header();
                 <div class="photo">
                     <img src="<?php echo get_template_directory_uri(); ?>/common/images/v-3.jpg">
                     <div class="midashi">
-                        やられたらやり返す・・・倍返しだ
+                        段取りで、会社はもっと速くなる。
                     </div>
                 </div>
                 <div class="text">
-                    <div class="kana">Naoki Hanzawa</div>
+                    <!-- <div class="kana">Naoki Hanzawa</div>
                     <div class="name">半沢直樹</div>
-                    <div class="position">秘書課 課長</div>
-                    <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
-                    </p>
+                    <div class="position">秘書課 課長</div> -->
+                    <p>
+経営と現場、社内とクライアントをつなぎ、情報と予定の“渋滞”を解消。<br>
+会議は「決める場」に、施策は「動く状態」に仕上げる――それが私たちの仕事です。<br>
+アポ調整、資料の要点化、議事のタスク化、関係者の合意形成までをワンストップで推進。<br>
+優先順位を整理し、ボールを落とさず前に進める段取り力が武器になります。<br>
+                </p>
                 </div>
             </div>
 
