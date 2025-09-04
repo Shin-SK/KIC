@@ -61,19 +61,29 @@ get_header();
             <div class="area">
                 <?php
                     $dir_path = get_template_directory() . '/common/images/partner';
-                    $files = glob($dir_path . '/*.{jpg,jpeg,png,gif,webp,svg}', GLOB_BRACE);
+                    $files = glob($dir_path . '/*.{jpg,jpeg,png,gif,webp,svg}', GLOB_BRACE) ?: [];
 
-                    // ファイルが存在すればループで表示
-                    if($files) {
-                        foreach($files as $file) {
-                            // ファイル名だけを抜き出してIMGタグに挿入
+                    /* 並び順：
+                    1) 先頭が「数字-」(例: 01-softbank.*) を優先（数字の小さい順）
+                    2) それ以外はベース名の自然順（大文字小文字を無視）
+                    */
+                    usort($files, function($a, $b){
+                        $na = strtolower(basename($a));
+                        $nb = strtolower(basename($b));
+
+                        $pa = preg_match('/^(\d+)-/', $na, $ma) ? (int)$ma[1] : PHP_INT_MAX;
+                        $pb = preg_match('/^(\d+)-/', $nb, $mb) ? (int)$mb[1] : PHP_INT_MAX;
+
+                        if ($pa !== $pb) return ($pa < $pb) ? -1 : 1;   // 01-, 02-… を先に
+                        return strnatcasecmp($na, $nb);                 // 残りを自然順で
+                    });
+
+                    /* 以降そのまま出力 */
+                    if ($files) {
+                        foreach ($files as $file) {
                             $filename = basename($file);
                             $img_url = get_template_directory_uri() . '/common/images/partner/' . $filename;
-                            ?>
-                            <div class="item">
-                                <img src="<?php echo esc_url($img_url); ?>" alt="">
-                            </div>
-                            <?php
+                            echo '<div class="item"><img src="'. esc_url($img_url) .'" alt=""></div>';
                         }
                     }
                 ?>
