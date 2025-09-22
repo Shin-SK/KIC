@@ -552,32 +552,36 @@ p {
     width: 80px;
   }
 }
-.message .text {
-  writing-mode: vertical-rl;
-  height: 300px;
-  margin: auto;
-  line-height: 1.5;
-}
-@media screen and (max-width: 576px) {
-  .message .text {
-    overflow-y: scroll;
-    height: auto;
-    max-height: calc(80vh - 80px);
-    overflow-x: hidden;
-    overflow-y: hidden;
-  }
-}
-.message .text p {
-  margin-left: 16px;
-}
-.message .text .name {
+.message .text .title-area .title {
+  font-size: clamp(2.8rem, 2.7346938776rem + 0.2040816327vw, 3rem);
   font-weight: bold;
-  font-family: "Zen Kurenaido", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: clamp(2rem, 1.9346938776rem + 0.2040816327vw, 2.2rem);
+  margin-bottom: 16px;
 }
-
+.message .text .title-area .name {
+  font-weight: bold;
+}
+.message .qa-area {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.message .qa-area .wrap {
+  display: flex;
+  flex-direction: column;
+}
+.message .qa-area .wrap .q {
+  padding: 16px 0px;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.message .qa-area .wrap .q::before {
+  content: "";
+  width: 16px;
+  height: 1px;
+  background-color: black;
+}
 .partner {
   background-color: #f5f5f5;
   padding: 40px 0px;

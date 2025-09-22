@@ -36,19 +36,27 @@ get_header();
             <div class="logo">
                 <img src="<?php echo get_template_directory_uri(); ?>/common/images/logo.svg">
             </div>
-            <div class="text">
-                <p class="br">目まぐるしく変化する社会。
-                現代のビジネスシーンにおいて、様々な環境の変化に対応するスキルと成長を続けるバイタリティが常に必要とされています。
-
-                しかし、求められているものはそれだけではありません。
-                いつの時代も、人と人を結ぶのは「信頼」。
-                信頼なき視点しか持てないのであれば、どんなに優秀でも発展に限りがあるのではないでしょうか。
-
-                向き合う全ての人がお客様と考え、お取引先様との営業パートナーとして相応しい人材としてあり続ける。
-
-                私たちは、成長し、変化し、改善し、実行することで結びつきを強め、信頼に応えて参ります。
-                </p>
-                <div class="name">代表取締役社長　加藤 生馬</div>
+            <div class="text row">
+                <div class="title-area mb-4 col-md-6 col-12">
+                    <div class="title">必要なのは、バイタリティと、信頼。</div>
+                    <div class="name">代表取締役社長　加藤 生馬</div>
+                </div>
+                <div class="qa-area col-md-6 col-12">
+                    <div class="wrap">
+                        <div class="q">社会の変化が激しい中で、御社が言う「対応力」とは。
+                        </div>
+                        <div class="a">事実を集めて仮説を立て、すぐ試し、出た結果で次の一手を決める力です。完璧を待たずに小さく始め、学びを積み上げる姿勢を指します。
+                        </div>
+                    </div>
+                    <div class="wrap">
+                        <div class="q">「信頼」をどう築く。単純だけど、複雑です。</div>
+                        <div class="a">まず、約束を明確にして守ること。難しければ早めに相談すること。伝えるときは、事実を先に、意見や提案をそのあとに置くこと。相手の状況を想像し、社内外のすべてをお客様として扱うこと。この積み重ねが信頼になります。</div>
+                    </div>
+                    <div class="wrap">
+                        <div class="q">評価される人材像、そして失敗への向き合い方は。</div>
+                        <div class="a">失敗自体は問題ではなく、放置が問題です。小さく検証→共有→是正→再実行ができ、相手の成果にどう貢献したかを言語化できる人を評価します。私たちは「成長・変化・改善・実行」を通じて結びつきを強め、信頼に応え続けます。</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -123,17 +131,17 @@ get_header();
                 <div class="box box3">
                     <div class="img"><img src="<?php echo get_template_directory_uri(); ?>/common/images/03.webp"></div>
                     <div class="wrap">
-                        <div class="title">販促企画・運営</div>
-                        <p>店頭プロモーションやサンプリング、POP/什器の手配、イベント運営までワンストップで対応。
-KPI設計→実行→検証→改善を高速で回し、売上・来店促進に直結する施策を提供します。</p>
+                        <div class="title">インターネット広告サービス</div>
+                        <p>サンプルテキストサンプルテキストサンプルテキスト</p>
                     </div>
                 </div>
                 <div class="box box4">
                     <div class="img"><img src="<?php echo get_template_directory_uri(); ?>/common/images/04.webp"></div>
                     <div class="wrap">
-                        <div class="title">教育・研修</div>
-                        <p>ロープレ・OJT・eラーニングを組み合わせ、接客力と商品知識を短期で底上げ。
-評価シートで成長を可視化し、トレーナーが定着まで伴走。即戦力化と離職防止を同時に実現します。</p>
+                        <div class="title">リユース事業</div>
+                        <p>
+                            サンプルテキストサンプルテキストサンプルテキスト
+                        </p>
                     </div>
                 </div>
             </div>
@@ -249,11 +257,20 @@ KPI設計→実行→検証→改善を高速で回し、売上・来店促進�
             <div class="head">有料職業紹介事業許可番号</div>
             <div class="text">13-ユ-311077</div>
 
+            <div class="head">税理士</div>
+            <div class="text"><a href="https://nakaikaikei.jp/" target="_blank">税理士法人 Novera Consulting</a></div>
+
+            <div class="head">社労士</div>
+            <div class="text"><a href="https://sr-station.com/offices/%E7%B4%85%E6%9E%97%E5%8A%B4%E5%8B%99%E7%AE%A1%E7%90%86%E4%BA%8B%E5%8B%99%E6%89%80/">紅林労務管理事務所</a></div>
+
+
             <div class="head">取引銀行</div>
             <div class="text">
-            - みずほ銀行 青葉台支店<br>
-            - 楽天銀行<br>
-            - 横浜信用金庫
+                - みずほ銀行<br>
+                - 楽天銀行<br>
+                - GMOあおぞらネット銀行<br>
+                - さわやか信用金庫<br>
+                - 東京シティ信用金庫
             </div>
 
             <div class="head">本社</div>

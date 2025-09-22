@@ -139,27 +139,64 @@ p{
 		}
 	}
 	.text{
-		-ms-writing-mode: tb-rl;
-		writing-mode: vertical-rl;
-		height: 300px;
-		margin: auto;
-		line-height: 1.5;
-		@include sp{
-			overflow-y: scroll;
-			height: auto;
-			max-height: calc(80vh - 80px);
-			overflow-x: hidden;
-			overflow-y: hidden;
-		}
-		p{
-			margin-left: 16px;
-		}
-		.name{
-			font-weight: bold;
-			@include hand();
-			@include fs(20);
+		.title-area{
+			.title{
+				@include fs(28);
+				font-weight: bold;
+				margin-bottom: 16px;
+			}
+			.name{
+				font-weight: bold;
+			}
 		}
 	}
+	.qa-area{
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		.wrap{
+			display: flex;
+			flex-direction: column;
+			.q{
+				padding: 16px 0px;
+				font-style: italic;
+				display: flex;
+				align-items: center;
+				gap: 4px;
+				&::before{
+					content: '';
+					width: 16px;
+					height: 1px;
+					background-color: black;
+				}
+			}
+			.a{
+				
+			}
+		}
+	}
+	// .text{
+	// 	-ms-writing-mode: tb-rl;
+	// 	writing-mode: vertical-rl;
+	// 	height: 300px;
+	// 	margin: auto;
+	// 	line-height: 1.5;
+	// 	@include sp{
+	// 		overflow-y: scroll;
+	// 		height: auto;
+	// 		max-height: calc(80vh - 80px);
+	// 		overflow-x: hidden;
+	// 		overflow-y: hidden;
+	// 	}
+	// 	p{
+	// 		margin-left: 16px;
+	// 	}
+	// 	.name{
+	// 		font-weight: bold;
+	// 		@include hand();
+	// 		@include fs(20);
+	// 	}
+	// }
 
 }
 
