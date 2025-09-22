@@ -101,52 +101,73 @@ get_header();
 
 </div>
 
-    <section class="about">
+<section class="about">
 
-        <div class="subtitle">
-            接客販売における営業促進を主軸として<br>
-            販売手法のセールスアウトソーシング等各種方面からの営業支援を行っております
-        </div>
-        <div class="about__wrap container">
+  <div class="subtitle">
+    接客販売における営業促進を主軸に、<br>
+    人材・運用・デジタルの三位一体で売上最大化を支援します。
+  </div>
 
-            <div class="area">
-                <div class="box box1">
-                    <div class="img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/common/images/01.webp">
-                    </div>
-                    <div class="wrap">
-                        <div class="title">人材派遣</div>
-                        <p>企業様が求めるスキルと経験を備えた人材を、繁忙期や新店立ち上げなどのタイミングに合わせ柔軟に派遣します。即戦力として現場に早期定着し、売上と顧客満足の両立に貢献します。
-                        </p>
-                    </div>
-                </div>
-                <div class="box box2">
-                    <div class="img"><img src="<?php echo get_template_directory_uri(); ?>/common/images/02.webp"></div>
-                    <div class="wrap">
-                        <div class="title">アウトソーシング</div>
-                        <p>売場運営、販促実務、棚卸・レポーティングなどの業務をワンストップで代行。繁閑に応じて必要なリソースだけをスケールでき、固定費を抑えながら成果に集中できます。
-                        </p>
-                    </div>
-                </div>
-                <div class="box box3">
-                    <div class="img"><img src="<?php echo get_template_directory_uri(); ?>/common/images/03.webp"></div>
-                    <div class="wrap">
-                        <div class="title">インターネット広告サービス</div>
-                        <p>サンプルテキストサンプルテキストサンプルテキスト</p>
-                    </div>
-                </div>
-                <div class="box box4">
-                    <div class="img"><img src="<?php echo get_template_directory_uri(); ?>/common/images/04.webp"></div>
-                    <div class="wrap">
-                        <div class="title">リユース事業</div>
-                        <p>
-                            サンプルテキストサンプルテキストサンプルテキスト
-                        </p>
-                    </div>
-                </div>
-            </div>
+  <div class="about__wrap container">
+    <div class="area">
+
+      <div class="box box1">
+        <div class="img">
+          <img src="<?php echo get_template_directory_uri(); ?>/common/images/01.webp" alt="">
         </div>
-    </section>
+        <div class="wrap">
+          <div class="title">人材派遣</div>
+          <p>
+            求めるスキル・経験を備えた即戦力人材を、繁忙期や新店立ち上げのタイミングに合わせて柔軟に派遣。
+            現場への早期定着を徹底し、売上向上と顧客満足の両立に貢献します。
+          </p>
+        </div>
+      </div>
+
+      <div class="box box2">
+        <div class="img">
+          <img src="<?php echo get_template_directory_uri(); ?>/common/images/02.webp" alt="">
+        </div>
+        <div class="wrap">
+          <div class="title">アウトソーシング</div>
+          <p>
+            売場運営・販促実務・棚卸・レポートまでをワンストップで代行。
+            繁閑に応じたリソース設計で固定費を抑え、成果に直結する運用へと最適化します。
+          </p>
+        </div>
+      </div>
+
+      <div class="box box3">
+        <div class="img">
+          <img src="<?php echo get_template_directory_uri(); ?>/common/images/03.webp" alt="">
+        </div>
+        <div class="wrap">
+          <div class="title">インターネット広告サービス</div>
+          <p>
+            Google/Meta/LINE 等の運用型広告からクリエイティブ制作、LP改善、計測設計まで一気通貫で支援。
+            店舗集客・EC売上に直結するKPIを設計し、日次の運用最適化と月次レポートで成果を可視化します。
+          </p>
+        </div>
+      </div>
+
+      <div class="box box4">
+        <div class="img">
+          <img src="<?php echo get_template_directory_uri(); ?>/common/images/04.webp" alt="">
+        </div>
+        <div class="wrap">
+          <div class="title">リユース事業</div>
+          <p>
+            買取・仕分け・再生・EC/店頭販売までをトータルでサポート。
+            在庫回転率の最適化や査定体制の構築、出張買取イベントの企画運営により、
+            収益性と循環型社会への貢献を両立させます。
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=stat_minus_2" />
