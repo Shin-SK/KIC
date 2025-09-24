@@ -1,0 +1,18 @@
+DirectoryIndex index.php index.html
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# 旧トップ直リンクを / へ301
+RewriteCond %{THE_REQUEST} \s/+(index\.html?)\s [NC]
+RewriteRule ^index\.html?$ / [R=301,L]
+
+# /wp/ に来たら / へ正規化（任意）
+RewriteRule ^wp/?$ / [R=301,L]
+
+# WP標準
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
